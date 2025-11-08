@@ -4,15 +4,15 @@ import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 
 export const metadata = {
-  title: "My Cool Docs Site",
+  title: "Mafer Marquina",
 };
 
 const banner = (
-  <Banner storageKey="some-key">My Project 1.0.0 is released 🎉</Banner>
+  <Banner storageKey="some-key">I will celebrate when I complete this! 🎉</Banner>
 );
 const navbar = (
   <Navbar
-    logo={<b>🦐 My Cool Project</b>}
+    logo={<b>🦐 Mafer Marquina</b>}
     logoLink={"https://bhavyadang.in"}
     projectLink="https://github.com/bhavya-dang"
     chatLink="https://discord.gg/"
