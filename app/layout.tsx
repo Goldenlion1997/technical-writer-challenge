@@ -13,8 +13,8 @@ const banner = (
 const navbar = (
   <Navbar
     logo={<b>🦐 Mafer Marquina</b>}
-    logoLink={"https://bhavyadang.in"}
-    projectLink="https://github.com/bhavya-dang"
+    logoLink={"/home"}
+    projectLink="https://github.com/Goldenlion1997"
     chatLink="https://discord.gg/"
   />
 );
@@ -48,7 +48,7 @@ export default async function RootLayout({
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/bhavya-dang/my-project"
+          docsRepositoryBase="https://github.com/Goldenlion1997/technical-writer-challenge"
           footer={footer}
           search={search}
           editLink={null}
