@@ -1,9 +1,12 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
-  tools: "Tools 🛠️",
-  resources: "Resources 🔥",
-  "###": {
+  home: "Home",
+  "---1": {
     type: "separator",
   },
-  docker: "Docker 🐳",
+  osticket: "osTicket",
+  "---2": {
+    type: "separator",
+  },
+  "employee-api": "Dummy REST API"
 };
