@@ -1,7 +1,7 @@
 export default {
-    one: "Installation Guide",
-    two: "Feature 2",
-    three: "Feature 3",
-    four: "Feature 4",
-    five: "Feature 5"
+    "installation": "How to Install osTicket",
+    "post-installation": "Post-Installation Setup Checklist",
+    "mfa-setup": "Set Up Multifactor Authentication (MFA)",
+    "visibility": "Edit Visibility Permissions",
+    "system-logs": "View System Logs"
 };
