@@ -1,13 +1,143 @@
-# Employee database
+# Dummy Employee API
 
-## Introduction
+## Description
 
-Docker is a platform for developing, shipping, and running applications inside lightweight, portable containers. It enables developers to package applications with all dependencies and run them in any environment.
+The Dummy Employee API allows users to interact with an employee database in a simple and efficient way. Using this API, you can:
 
-## Installation
+- Retrieve data for all employees or a specific employee
+- Create new employee records
+- Update existing employee information
+- Delete employee records
 
-### Windows
+## cURL commands and jSONS
 
-1. Download Docker Desktop from [Docker's official website](https://www.docker.com/products/docker-desktop/).
-2. Run the installer and follow the on-screen instructions.
-3. Restart your system if necessary.
+### Retrieve a single employee `(/employee/{id})`
+
+When making this call, you will get the following information:
+- This endpoint retrieves a single employee’s information.
+- Status indicates if the endpoint was a success or failure.
+- Data contains all the employees information (name, salary, age).
+- Message indicates the same as “status” in a human readable language.
+
+#### cURL Command
+
+```
+curl -X GET "https://dummy.restapiexample.com/api/v1/employee/1" 
+```
+
+#### JSON
+```
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "employee_name": "Tiger Nixon",
+            "employee_salary": "320800",
+            "employee_age": "61",
+            "profile_image": ""
+        },
+           ],
+    "message": "Successfully! All records has been fetched."
+}
+
+```
+### Create a record `(/create)`
+
+#### cURL Command
+```
+curl -X POST https://dummy.restapiexample.com/api/v1/create
+```
+
+#### JSON
+```
+{
+    "status": "success",
+    "data": {
+        "id": 9537
+    },
+    "message": "Successfully! Record has been added."
+}
+
+```
+
+## Required fields and data for `/’employee’`
+
+The following table shows the required fields for /employee and what kind of data they can hold.
+
+| Fields | Type of data | Example |
+|--------|--------------|---------|
+| id | String | 1 |
+| employee_name | String | Tiger Nixon |
+| employee_salary | Number | 320800 |
+| employee_age | Number | 61 |
+| profile_image | String | URL |
+
+Other elements that should be included are:
+
+- Departament
+- Position
+- Start data
+- Status
+
+## Guide
+
+### View an employee record
+
+In order to perform this, you'll need the employee's ID.
+
+1. Open your **API tool** like Postman.
+2. Copy and paste the following **command** in your terminal.
+```
+curl -X GET https://dummy.restapiexample.com/api/v1/employee/1
+```
+3. Replace the last number with the **employee’s ID** you want to view.
+4. You should get something similar to this with all the employee’s information:
+```
+{
+  "status": "success",
+  "data": {
+    "id": 1,
+    "employee_name": "Tiger Nixon",
+    "employee_salary": 320800,
+    "employee_age": 61
+  },
+  "message": "Successfully! Record has been fetched."
+}
+```
+
+#### Explanation:
+- **“Status”** indicates if the request was a success or failure.
+- **“Data”** contains all the employees information (name, salary, age).
+- **“Message”** indicates the same as “status” in a human readable language.
+
+### Delete an employee record
+1. Open your **API tool** like Postman.
+2. Copy and paste the following **command** in your terminal. 
+```
+curl -X DELETE https://dummy.restapiexample.com/api/v1/delete/1
+```
+3. Replace the last number with the **employee’s ID** you want to delete.
+4. You should get something similar to this, validating if the record was deleted successfully from the database:
+```
+{
+  "status": "success",
+  "data": "1",
+  "message": "Successfully! Record has been deleted"
+}
+```
+#### Explanation: 
+- **“Data”** value shows the deleted record.
+- **“Message”** confirms the record has been deleted.
+
+
+
+
+
+
+
+
+
+
+
+
