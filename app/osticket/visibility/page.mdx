@@ -1,0 +1,67 @@
+# Edit visibility permissions
+
+Visibility permissions let administrators limit the visibility of Departments, Agents, and Help Topics based on an Agent’s Department access. This ensures agents only see the parts of the system relevant to their role, reducing clutter and maintaining security.
+
+## How to edit visibility permissions
+
+Administrator can edit the Visibility Permissions an Agent has:
+
+1. Go to **Admin Panel** > **Agents**. 
+2. Select the **Agent** you want to edit.
+3. Open the **Permissions** tab.
+4. Click on **Miscellaneous**.
+5. Check or uncheck the boxes:
+    a. **Agent**: Allows the agent to see all agents in the system.
+    b. **Department**: Allows the agent to see all departments in the system.
+
+> **Note**:  
+> - Both boxes **are checked by default** for new and existing agents.  
+> - If either box is unchecked, the agent will only see the Agents and Departments they have access to in the Agent Panel.
+
+## Agent visibility
+
+If “**Agent — Ability to see Agents in all Departments**” is unchecked, the agent will only see agents who belong to departments the agent themselves has access to.
+
+### Auditing Agent Visibility
+
+Admins can export the agent list to verify visibility:
+
+1. Go to **Admin Panel** > **Agents** > **More**
+2. Select **Export Agents**
+3. Compare department permissions to determine which agents are visible.
+
+> **Note**:  
+> - This method helps administrators verify visibility settings without logging in as each agent.   
+> - Agents set to On Vacation do not show up throughout most of the Agent Panel.
+
+#### Example:
+
+Export highlights visible agents (e.g., in purple). Agent Adriane1 can see Adriane2 and Adriane3 if their departments allow.
+
+## Department visibility
+
+If “**Department — Ability to see all Departments**” is unchecked, the agent will only be able to see departments the agent has access to. Archived or disabled departments are hidden in the panel when visibility is restricted. 
+
+Visibility affects: Ticket Transfers, Task Transfers, Ticket Creation, Department Quick Filters, Custom Department Field Quick Filters, Advanced Searches
+
+## Canned Responses & Help Topics
+
+### Canned Responses
+
+- Agents see only responses for departments they have access to, or those assigned to “All Departments.”
+- Agents can only create or edit responses for accessible departments.
+
+### Help Topics
+
+- Help Topics assigned to departments the agent doesn’t have access to will be hidden (unless the agent has “see all departments”). 
+- Public Help Topics or those under the System Default Department are visible even if department access is restricted. 
+- If a parent topic is hidden, all its child topics are also hidden. 
+- Archived or disabled Help Topics still appear in quick filters/search results, though not in main UI areas.
+
+## Summary of Visibility Permissions
+
+- **Agents**: Limiting agent visibility prevents users from seeing other agents outside their department.
+- **Departments**: Limiting department visibility ensures agents only see tickets, help topics, and canned responses for their own departments.
+- **Help Topics and Canned Responses**: These are automatically filtered based on the agent’s department access, unless they are assigned to “All Departments.”
+
+
