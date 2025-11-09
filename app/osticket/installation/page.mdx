@@ -1,13 +1,72 @@
-# Feature 1
+# How to Install osTicket
 
-## Introduction
+This guide will walk you through the installation process of osTicket.
 
-Docker is a platform for developing, shipping, and running applications inside lightweight, portable containers. It enables developers to package applications with all dependencies and run them in any environment.
+> **Note:** While the installer provides a step by step guide during the installation process, it’s important and helpful to have basic knowledge about **Web servers, PHP and MySQL**.
 
-## Installation
+**Watch the installation video**: If you prefer to watch the tutorial, follow the step-by-step video [How to Install osTicket v1.12](https://www.youtube.com/watch?v=K7T_JjvEamg)
 
-### Windows
+## Prerequisites
 
-1. Download Docker Desktop from [Docker's official website](https://www.docker.com/products/docker-desktop/).
-2. Run the installer and follow the on-screen instructions.
-3. Restart your system if necessary.
+### Server Prerequisites
+
+Before downloading osTicket, make sure your server meets the following requirements:
+
+- Apache/LiteSpeed/IIS webserver (with the URL Rewrite module installed/enabled).
+- PHP 8.1 - 8.2 (8.2 recommended).
+- MySQL 5.0 (or later).
+
+> **Note:** If you are unsure whether your server meets these requirements, please check with your host or webmaster before proceeding.
+
+### User Prerequisites
+
+- You must have a MySQL database with a valid user, password and hostname.
+- MySQL user must have full privileges on the database.
+
+> **Note:** If you are unsure whether you have these details or if the user has sufficient permissions, consult your host or database admin before proceeding.
+
+### Recommended Programs for Windows
+
+If you are installing osTicket on Windows, we also recommend you to install the following programs:
+
+| Program | Description | Recommended for |
+|---------|-------------|-----------------|
+| [PHP 8.2/8.1](https://windows.php.net/download/) | Required to run osTicket. | Windows Server |
+| [MySQL 8.0](https://dev.mysql.com/downloads/installer/) | Database server used by osTicket. | Windows Server |
+| [MariaDB](https://mariadb.org/download/) | Alternative to MySQL. | Windows Server |
+| [PHP Manager 2](https://www.phpmanager.xyz/) | Makes managing PHP on IIS much easier. | IIS |
+
+## Set Up the Installation Files
+
+1. Download the [latest version of osTicket](https://osticket.com/download).
+2. Unzip and extract the files and upload the contents of the upload folder to a directory of your choice on your server. For example `/osticket/`, `/helpdesk/` or `/support/`.
+3. If you’re using FTP to upload, make sure you know how to change file permissions (for uploading & write-access).
+
+## Run the Installation Script
+
+After uploading, you can complete the installation by:
+- Visiting the folder in your browser with a osTicket URL (e.g. http://www.yourdomain.com/support).
+- Or by going directly to the setup page: http://www.yourdomain.com/support/setup/
+
+The installer will:
+
+1. Automatically check for paths and permission issues.
+2. If all checks pass, ask you to enter your configuration details (`database name/user/password`, your admin user for osTicket, etc.).
+3. Create and populate the database tables.
+4. Write a config file (`include/ost-config.php`).
+
+## Set Up Your Account
+
+Once the installation is complete:
+
+1. Log in with the username and password you created during the installation process.
+2. Perform a cleanup:
+    a. Change permission of include/ost-config.php to remove write access
+    b. Delete `/setup` directory
+    c. Enable the system
+
+## Post-Install Setup
+
+Configure your new support ticket system for you by visiting [Post-Installation Setup Checklist](/osticket/post-installation).
+
+> **Need help?** If you encounter issues during installation, see our [Troubleshooting guide](/) for solving common problems. For further help, please check out our [Professional Installation Services](https://osticket.com/services/professional-support/).
