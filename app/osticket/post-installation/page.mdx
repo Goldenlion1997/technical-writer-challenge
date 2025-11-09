@@ -1,13 +1,25 @@
-# Feature 1
+# Post-Installation Setup Checklist
 
-## Introduction
+Once osTicket has been installed, you’ll need to complete a few additional configurations in the Admin Panel before it’s fully ready for use. This article provides a checklist of the main setup tasks to help you finish configuring your osTicket system.
 
-Docker is a platform for developing, shipping, and running applications inside lightweight, portable containers. It enables developers to package applications with all dependencies and run them in any environment.
+> **Note:** Only staff with admin privileges can access the Admin Panel. Use the username and password you created during the installation process to log in.
 
-## Installation
+## Configure Email Settings
 
-### Windows
+Setting up email depends on your system and personal preferences. osTicket allows you to route an unlimited number of emails as incoming tickets. For detailed instructions please read [Email Settings Guide](https://docs.osticket.com/en/latest/Getting%20Started/Email%20Settings.html).
 
-1. Download Docker Desktop from [Docker's official website](https://www.docker.com/products/docker-desktop/).
-2. Run the installer and follow the on-screen instructions.
-3. Restart your system if necessary.
+## Organize Requests With Help Topics
+
+In addition to emails, clients and users can also use an online form to create tickets. Help topics automatically assign tickets to the appropriate department and categorize them by priority, eliminating the need for manual assignment.
+
+## Set Up Departments And Access Levels
+
+Departments are used to categorize incoming tickets and also serve as control for staff members. For example you can restrict staff’s ticket access based on departments. To manage departments go to [**Admin Panel**](https://docs.osticket.com/en/latest/Admin%20Panel.html) > **Department Tab**.
+
+## Add Staff Members
+
+osTicket allows you to add an unlimited number of representatives to the system. Each staff member is assigned to a group and a department which determines their permissions. You can also set every account as **Admin** or **Staff**.
+
+## Set Up System Preferences
+
+To change or disable system settings, go to the [Settings Tab](https://docs.osticket.com/en/latest/Admin%20Panel.html#settings-tab) in the **Admin Panel**.
