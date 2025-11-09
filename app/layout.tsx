@@ -2,6 +2,7 @@ import { Footer, Layout, Navbar } from "nextra-theme-docs";
 import { Banner, Head, Search } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
+import Image from "next/image";
 
 export const metadata = {
   title: "Mafer Marquina",
@@ -12,7 +13,15 @@ const banner = (
 );
 const navbar = (
   <Navbar
-    logo={<b>🦐 Mafer Marquina</b>}
+    logo={
+      <Image
+        src="/logo-test-no-bg.png"
+        alt="Mafer Marquina"
+        width={100}
+        height={40}
+        priority
+      />
+    }
     logoLink={"/home"}
     projectLink="https://github.com/Goldenlion1997"
     chatLink="https://discord.gg/"

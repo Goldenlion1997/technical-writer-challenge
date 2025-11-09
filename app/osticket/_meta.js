@@ -1,7 +1,7 @@
 export default {
-    "installation": "How to Install osTicket",
-    "post-installation": "Post-Installation Setup Checklist",
+    "installation": "How to install osTicket",
+    "post-installation": "Post-installation setup checklist",
     "mfa-setup": "Set Up Multifactor Authentication (MFA)",
-    "visibility": "Edit Visibility Permissions",
+    "visibility": "Edit visibility permissions",
     "system-logs": "View System Logs"
 };
