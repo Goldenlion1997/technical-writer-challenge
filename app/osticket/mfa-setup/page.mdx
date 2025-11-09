@@ -1,2 +1,60 @@
 # Set Up Multifactor Authentication (MFA)
 
+Multifactor Authentication (MFA), also known as Two Factor Authentication (2FA), adds an extra layer of security for agents logging into the helpdesk. After entering their username and password correctly, agents must provide a verification token to complete the login process. 
+
+**Watch the instructions video**: If you prefer to watch the tutorial, follow the step-by-step video [osTicket Email Two Factor Authentication](https://youtu.be/NGIWEt7U7x0)
+
+
+## Configure Two-Factor Authentication (2FA)
+
+![Configure MFA](/configure-mfa-agents.png "Configure MFA")
+
+Agents can configure their 2FA settings on their own. To do so:
+
+1. Go to **Profile**.
+2. In the "Default 2FA" option, select **Enable**.
+3. Change the settings by selecting the **Configure Options** button.
+
+> **Note**: By default, 2FA is optional for agents. However, and administrator can require mandatory 2FA by following the instructions below.
+
+## Make 2FA mandatory for agents
+
+![MFA Mandatory](/make-MFA-madatory.png "MFA MAndatory")
+
+> **Note**: Only Administrators can enforce mandatory 2FA.
+
+1. Go to **Admin Panel** > **Settings** > **Agents**.
+2. Check the box **Require agents to turn on 2FA**.
+
+## Agents steps when 2FA is mandatory
+
+If an administrator has enabled mandatory 2FA:
+
+1. Agents must **configure and save their default 2FA method** before accessing the helpdesk.
+2. Once 2FA has been configured, the Agent must **save the configured method** as well.
+3. The next time the Agent logs into the helpdesk, they will be **prompted to enter a token** to finish logging into the helpdesk.
+
+## Customize the verification token email template
+
+![Edit email template](/edit-email-template.png "Edit email template")
+
+An administrator can edit the email template sent for the verification token:
+
+1. Access the **Admin Panel** > **Settings** > **Agents**
+2. Go to the **Templates** tab.
+3. Select the **Two Factor Authentication Email** template and make the desired changes.
+
+> **Note**: The template variable that contains the token is `%{otp}`.
+
+## Reset an agent's 2FA configuration
+
+![Edit email template](/reset-mfa-agents.png "Edit email template")
+
+In the event that an agent becomes locked out of their account, an administrator cam reset their 2FA:
+
+1. Go to **Admin Panel** > **Agents**
+2. Select the **Agent** you want to edit.
+3. Click on **Reset 2FA**.
+
+
+
